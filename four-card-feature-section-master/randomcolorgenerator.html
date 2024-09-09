@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>randomcolorgenerator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="main">
+        <div class="container">
+            <h1>Random color generator</h1>
+            <button id="btn">generate color</button>
+        </div>
+    </div>
+  <script>
+    const get=()=>{
+     const randomnumber=Math.round(Math.random()*16777215);
+    //   console.log(randomnumber);
+       const randomcode="#"+ randomnumber.toString(16);
+    //    console.log(randomcode);
+    document.body.style.backgroundColor=randomcode;
+    
+    }
+document.getElementById("btn").addEventListener("click", get)
+  </script>
+</body>
+</html>
